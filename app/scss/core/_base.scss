@@ -35,10 +35,11 @@ body {
 	line-height: 1;
 	text-transform: uppercase;
 	font-weight: 800;
-	padding: 22px 35px 20px;
+	padding: 22px 35px 18px;
 	border-radius: 35px;
 	color: #fff;
 	background: $accent_color;
+	transition: .3s background-color ease;
 	&:hover {
 		background: $accent_hover_color;
 	}

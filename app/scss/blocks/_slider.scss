@@ -1,0 +1,137 @@
+.slider {
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.slider__control {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slider__arrow {
+  width: 15px;
+  height: 31px;
+  background: url(img/slider/arrow.png) no-repeat center / cover;
+  &--right {
+    transform: rotate(180deg);
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.slider__list {
+  overflow: hidden;
+}
+
+.slider__item {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.slider__pictures {
+  width: 57%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__img {
+  width: 70%;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    right: 100%;
+    display: block;
+    width: 75px;
+    height: 92px;
+    background: url(img/leaf-3-bg.png) no-repeat center / cover;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -35px;
+    right: -20px;
+    display: block;
+    width: 99px;
+    height: 73px;
+    background: url(img/leaf-4-bg.png) no-repeat center / cover;
+  }
+}
+
+.slider__content {
+  width: 42%;
+}
+
+.slider__title {
+  font-size: em(36px);
+  font-weight: bold;
+  color: $grey_hover_color;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.slider__subscribe {
+  font-size: em(18px);
+  margin-bottom: 35px;
+}
+
+.slider__params {
+  display: flex;
+  font-size: em(18px);
+  margin-bottom: 30px;
+}
+
+.slider__kkal {
+  &-number {
+    display: block;
+    font-weight: bold;
+
+    &::after {
+      content: 'ккал';
+      margin-left: 5px;
+    }
+  }
+}
+
+.slider__weight {
+  margin-left: 50px;
+  &-number {
+    display: block;
+    font-weight: bold;
+
+    &::after {
+      content: 'грамм';
+      margin-left: 5px;
+    }
+  }
+}
+
+.slider__footer {
+  display: flex;
+  align-items: center;
+}
+
+.slider__price {
+  font-size: em(60px);
+  font-weight: 300;
+  color: $grey_hover_color;
+  margin-right: 30px;
+
+  &::after {
+    content: '\20BD';
+    margin-left: 14px;
+  }
+}

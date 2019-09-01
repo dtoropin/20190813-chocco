@@ -1,0 +1,80 @@
+.composition {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+  background-color: #61c4d9;
+  text-align: center;
+  transition: .3s background-color ease;
+  margin-bottom: 25px;
+
+  &:hover {
+    background-color: #00accf;
+    & > .composition__list {
+      opacity: 1;
+      z-index: $z-composition;
+    }
+  }
+}
+
+.composition__text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-top: 67px;
+  font-size: em(14px);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background: url(img/sprite.svg#chocolate-bar) no-repeat center 10px / 56%;
+}
+
+.composition__list {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 270px;
+  padding: 26px 30px;
+  border-radius: 5px;
+  border: solid 1px #efefef;
+  box-shadow: 2px 3px 10px #ccc;
+  background: #fff;
+  font-weight: 500;
+  color: #2f3234;
+  transition: .3s opacity ease;
+}
+
+.composition__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.composition__img {
+  width: 35px;
+  height: 35px;
+  margin-right: 25px;
+}
+
+@each $icon in (oat, seaweed, almond, washing-powder, seeds, apitherapy, beans) {
+  .composition__img--#{$icon} {
+    background: url(img/sprite.svg##{$icon}) no-repeat center / cover;
+  }
+}
+
+.composition__title {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.composition__weight {
+  &::after {
+    content: 'г';
+    margin-left: 3px;
+  }
+}
