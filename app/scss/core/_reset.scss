@@ -1,0 +1,33 @@
+/*! custom style */
+body,div,section,ul,li,h1,h2,h3,h4,h5,h6,form,input,textarea,select,p {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	outline: none;
+	color: inherit;
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+	
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+input,textarea,select {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	outline: none;
+}

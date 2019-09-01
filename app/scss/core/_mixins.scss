@@ -1,0 +1,27 @@
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: $font-family;
+		font-weight: $weight;
+		font-style: $style;
+		src: url('#{$file-path}.woff') format('woff'), url('#{$file-path}.woff2') format('woff2');
+	}
+}
+
+@function em($target, $context: $font_base_size) {
+	@return $target / $context + 0em;
+}
+	
+@function cp($target, $context: $content_width) {
+	@return $target / $context * 100%;
+}
+
+// media
+@mixin phone {
+  @media (max-width: 480px) { @content; }
+}
+@mixin tablet {
+  @media (max-width: 768px) { @content; }
+}
+@mixin notebook {
+  @media (max-width: 992px) { @content; }
+}

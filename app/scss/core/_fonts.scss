@@ -1,0 +1,9 @@
+// fonts
+@include font-face('MuseoSansCyrl', './fonts/MuseoSansCyrl-500');
+@include font-face('AlegreyaSans', './fonts/AlegreyaSans-Bold', bold);
+@include font-face('AlegreyaSans', './fonts/AlegreyaSans-ExtraBold', 800);
+@include font-face('OpenSans', './fonts/OpenSans-Regular');
+@include font-face('AlegreyaSans', './fonts/AlegreyaSans-Medium', 500);
+@include font-face('AlegreyaSans', './fonts/AlegreyaSans-Regular');
+@include font-face('AlegreyaSans', './fonts/AlegreyaSans-Light', 300);
+@include font-face('AlegreyaSans', './fonts/AlegreyaSans-BlackItalic', 900, italic);

@@ -1,0 +1,23 @@
+body {
+	overflow-y: scroll;
+	font-family: $font_base;
+	font-size: $font_base_size;
+	color: $grey_color;
+
+	&.noscroll {
+		overflow: hidden;
+	}
+}
+
+.wrapper {
+	min-width: 320px;
+	position: relative;
+	cursor: default;
+}
+
+.container {
+	max-width: $content_width;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+	
