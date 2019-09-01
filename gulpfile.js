@@ -85,8 +85,8 @@ gulp.task('style', function () {
 		.pipe(sass({ outputStyle: 'compact' }).on("error", notify.onError()))
 		.pipe(rename({ suffix: '.min', prefix: '' }))
 		.pipe(prefixer())
-		.pipe(gcmq())
-		.pipe(cssmin())
+		// .pipe(gcmq())
+		// .pipe(cssmin())
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(path.style.dest))
 		.pipe(reload({ stream: true }));

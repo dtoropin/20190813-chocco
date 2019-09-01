@@ -1,0 +1,21 @@
+.nav {
+  flex-grow: 1;
+  margin-left: 42px;
+  margin-right: 42px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  font-size: em(18px);
+}
+
+.nav__link {
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

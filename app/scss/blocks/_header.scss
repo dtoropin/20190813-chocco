@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.phone {
+  font-size: em(24px);
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 11px;
+    background: url(img/phone-bg.png) no-repeat center / cover;
+    margin-right: 6px;
+  }
+}

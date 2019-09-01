@@ -1,0 +1,13 @@
+.logo {
+  width: 55px;
+  height: 42px;
+  font-family: $MuseoSansCyrl;
+  font-size: em(24px);
+  line-height: 0.88;
+  text-transform: uppercase;
+  word-wrap: break-word;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,29 @@
+.feature {
+  display: flex;
+  align-items: center;
+  z-index: $z-feature;
+}
+
+.feature__item {
+  width: 145px;
+  margin-right: 46px;
+  display: flex;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.feature__img {
+  flex-shrink: 0;
+  width: 50px;
+  height: 42px;
+  margin-right: 7px;
+  stroke: #b0f7ff;
+}
+
+@each $icon in (5, 6, 4) {
+  .feature__img--#{$icon} {
+    background: url(img/sprite.svg##{$icon}) no-repeat center / contain;
+  }
+}
