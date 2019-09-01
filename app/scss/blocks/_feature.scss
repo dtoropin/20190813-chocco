@@ -8,6 +8,7 @@
   width: 145px;
   margin-right: 46px;
   display: flex;
+  align-items: center;
 
   &:last-child {
     margin-right: 0;
@@ -22,7 +23,7 @@
   stroke: #b0f7ff;
 }
 
-@each $icon in (5, 6, 4) {
+@each $icon in (leaves, car, ruler) {
   .feature__img--#{$icon} {
     background: url(img/sprite.svg##{$icon}) no-repeat center / contain;
   }

@@ -1,0 +1,95 @@
+.about {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 191px;
+    height: 314px;
+    background: url(img/leaf-2-bg.png) no-repeat center / cover;
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 161px;
+    height: 229px;
+    background: url(img/raspberries-bg.png) no-repeat center / cover;
+    position: absolute;
+    bottom: -107px;
+    left: 0;
+  }
+}
+
+.about__container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.about__header {
+  width: 410px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.about__subscribe {
+  font-size: em(18px);
+}
+
+.about__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__item {
+  max-width: 280px;
+  text-align: center;
+}
+
+.about__img {
+  position: relative;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background: #f2f5f4;
+  margin: 0 auto 35px;
+}
+
+.about__svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75px;
+  height: 75px;
+}
+
+@each $icon in (person, smile, muscle) {
+  .about__svg--#{$icon} {
+    background: url(img/sprite.svg##{$icon}) no-repeat center / cover;
+  }
+}
+
+.about__title {
+  font-size: em(27px);
+  font-weight: bold;
+  color: $grey_hover_color;
+  margin-bottom: 30px;
+}
+
+.about__text {
+  font-size: em(18px);
+  font-weight: 300;
+  line-height: 1.4;
+}

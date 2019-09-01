@@ -144,6 +144,8 @@ body.noscroll { overflow: hidden; }
 
 .container { max-width: 940px; margin: 0 auto; padding: 0 10px; }
 
+.section-title { font-size: 3em; font-weight: bold; text-transform: uppercase; color: #0d0d0d; margin-bottom: 25px; }
+
 .button { font-size: 1.125em; line-height: 1; text-transform: uppercase; font-weight: 800; padding: 22px 35px 20px; border-radius: 35px; color: #fff; background: #0f5a47; }
 
 .button:hover { background: #0b4d3c; }
@@ -188,16 +190,46 @@ body.noscroll { overflow: hidden; }
 
 .feature { display: flex; align-items: center; z-index: 10; }
 
-.feature__item { width: 145px; margin-right: 46px; display: flex; }
+.feature__item { width: 145px; margin-right: 46px; display: flex; align-items: center; }
 
 .feature__item:last-child { margin-right: 0; }
 
 .feature__img { flex-shrink: 0; width: 50px; height: 42px; margin-right: 7px; stroke: #b0f7ff; }
 
-.feature__img--5 { background: url(img/sprite.svg#5) no-repeat center/contain; }
+.feature__img--leaves { background: url(img/sprite.svg#leaves) no-repeat center/contain; }
 
-.feature__img--6 { background: url(img/sprite.svg#6) no-repeat center/contain; }
+.feature__img--car { background: url(img/sprite.svg#car) no-repeat center/contain; }
 
-.feature__img--4 { background: url(img/sprite.svg#4) no-repeat center/contain; }
+.feature__img--ruler { background: url(img/sprite.svg#ruler) no-repeat center/contain; }
+
+.about { position: relative; }
+
+.about::before { content: ''; display: block; width: 191px; height: 314px; background: url(img/leaf-2-bg.png) no-repeat center/cover; position: absolute; bottom: 25%; left: 0; }
+
+.about::after { content: ''; display: block; width: 161px; height: 229px; background: url(img/raspberries-bg.png) no-repeat center/cover; position: absolute; bottom: -107px; left: 0; }
+
+.about__container { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding-top: 24px; padding-bottom: 24px; }
+
+.about__header { width: 410px; margin: 0 auto; text-align: center; margin-bottom: 80px; }
+
+.about__subscribe { font-size: 1.125em; }
+
+.about__list { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+
+.about__item { max-width: 280px; text-align: center; }
+
+.about__img { position: relative; width: 125px; height: 125px; border-radius: 50%; background: #f2f5f4; margin: 0 auto 35px; }
+
+.about__svg { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 75px; height: 75px; }
+
+.about__svg--person { background: url(img/sprite.svg#person) no-repeat center/cover; }
+
+.about__svg--smile { background: url(img/sprite.svg#smile) no-repeat center/cover; }
+
+.about__svg--muscle { background: url(img/sprite.svg#muscle) no-repeat center/cover; }
+
+.about__title { font-size: 1.6875em; font-weight: bold; color: #0d0d0d; margin-bottom: 30px; }
+
+.about__text { font-size: 1.125em; font-weight: 300; line-height: 1.4; }
 
 /*# sourceMappingURL=index.min.css.map */
