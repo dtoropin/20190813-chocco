@@ -1,12 +1,11 @@
 /*! custom style */
-body,div,section,ul,li,h1,h2,h3,h4,h5,h6,form,input,textarea,select,p {
+div,section,ul,li,h1,h2,h3,h4,h5,h6,form,input,textarea,select,p {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
 a {
-	display: inline-block;
 	outline: none;
 	color: inherit;
 	text-decoration: none;

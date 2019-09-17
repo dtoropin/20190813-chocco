@@ -1,0 +1,23 @@
+.menu {
+  background: url(img/menu-bg.jpg) no-repeat center / cover;
+}
+
+.menu__container {
+  position: relative;
+  height: 100%;
+  background: rgba(#000, .3);
+}
+
+.menu__head {
+  position: absolute;
+  top: 99px;
+  left: 79px;
+}
+
+.menu__content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 25%;
+}

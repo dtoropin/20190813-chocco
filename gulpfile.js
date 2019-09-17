@@ -21,35 +21,35 @@ var gulp = require('gulp'),
 var path = {
 	html: {
 		src: 'app/*.html',
-		dest: './',
+		dest: 'dist/',
 		watch: 'app/**/*.html'
 	},
 	style: {
 		src: 'app/scss/*.scss',
-		dest: 'files/',
+		dest: 'dist/files/',
 		watch: 'app/scss/**/*.scss'
 	},
 	js: {
 		src: 'app/js/*.js',
-		dest: 'files/',
+		dest: 'dist/files/',
 		watch: 'app/js/**/*.js'
 	},
 	fonts: {
 		src: 'app/fonts/**/*.*',
-		dest: 'files/fonts/',
+		dest: 'dist/files/fonts/',
 		watch: 'app/fonts/**/*.*'
 	},
 	img: {
 		src: 'app/img/**/*.*',
-		dest: 'files/img/',
+		dest: 'dist/files/img/',
 		watch: 'app/img/**/*.*'
 	},
-	clean: './files'
+	clean: 'dist'
 };
 
 var config = {
 	server: {
-		baseDir: './'
+		baseDir: 'dist/'
 	},
 	host: 'localhost',
 	port: 9000,

@@ -1,0 +1,78 @@
+.accordion {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.accordion__item {
+  flex-shrink: 0;
+  height: 100%;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+
+  &.active {
+    flex-shrink: 1;
+    & > .accordion__text {
+      width: 100%;
+    }
+
+    & > .accordion__link--substrate {
+      display: block;
+    }
+  }
+}
+
+.accordion__link {
+  width: 100px;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  padding: 46px 30px 0 30px;
+  line-height: 1;
+  font-size: em(48px);
+  font-weight: 500;
+  color: #fff;
+  box-sizing: border-box;
+  transition: .3s color ease;
+
+  &--substrate {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:hover {
+    color: rgba(#fff, .7);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.7);
+    z-index: -1;
+  }
+}
+
+@each $bg in (item1, item2, item3) {
+  .accordion__link--#{$bg} {
+    background: url(img/menu-#{$bg}-bg.jpg) no-repeat center / cover;
+  }
+}
+
+.accordion__text {
+  width: 0;
+  background-color: rgba(47, 50, 52,.93);
+  color: #ffffff;
+  line-height: 1.5;
+  z-index: 5;
+
+  & > p {
+    padding: cp(50px) cp(127px) cp(50px) cp(27px);
+  }
+}

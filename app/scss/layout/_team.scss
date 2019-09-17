@@ -1,6 +1,5 @@
 .team {
   position: relative;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,6 +25,7 @@
     width: 104px;
     height: 114px;
     background: url(img/team/raspberries-bg.png) no-repeat center / contain;
+    z-index: $z-team-after;
   }
 }
 
@@ -46,6 +46,7 @@
   width: 220px;
   height: 288px;
   margin-bottom: 25px;
+  background: no-repeat center / cover;
 }
 
 .team__block {
@@ -53,9 +54,8 @@
 }
 
 .team__title {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
   font-size: em(21px);
   font-weight: 500;
   color: $grey_hover_color;
@@ -78,7 +78,7 @@
       opacity: 1;
     }
     &::after {
-      transform: rotate(180deg);
+      transform: rotateX(180deg);
     }
   }
 }
