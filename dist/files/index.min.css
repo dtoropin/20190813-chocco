@@ -393,4 +393,34 @@ body { overflow-y: auto; font-family: "AlegreyaSans", sans-serif; font-size: 16p
 
 .close::before { top: 8px; transform: rotate(-45deg); }
 
+.reviews { position: relative; display: flex; flex-direction: column; justify-content: center; }
+
+.reviews::before { content: ''; position: absolute; bottom: -92px; left: 0; width: 135px; height: 193px; display: block; background: url(img//reviews/berryes-bg.png) no-repeat center/cover; }
+
+.reviews::after { content: ''; position: absolute; top: 36px; right: 0; width: 150px; height: 86px; display: block; background: url(img/reviews/strawberry-bg.png) no-repeat center/cover; }
+
+.reviews__list { padding: 50px 160px 35px 45px; background: url(img//reviews/branch-bg.jpg) no-repeat right top; }
+
+.reviews__item { display: none; height: 100%; }
+
+.reviews__item.active { display: flex; }
+
+.reviews__img { flex-shrink: 0; width: 253px; height: 259px; margin-right: 20px; background: no-repeat center / cover; }
+
+.reviews__head { font-size: 1.875em; font-weight: 500; color: #323232; margin-bottom: 29px; }
+
+.reviews__text { font-size: 1.125em; margin-bottom: 30px; line-height: 1.2; }
+
+.reviews__author { font-size: 1.125em; font-weight: 500; }
+
+.reviews__thumb { display: flex; justify-content: center; }
+
+.reviews__thumd-item ~ .reviews__thumd-item { margin-left: 3px; }
+
+.reviews__thumd-item.active > .reviews__thumd-link { border: 4px solid #0f5a47; }
+
+.reviews__thumd-link { display: block; width: 72px; height: 72px; border-radius: 50%; border: 4px solid transparent; }
+
+.reviews__thumd-link:hover { border: 4px solid rgba(15, 90, 71, 0.5); }
+
 /*# sourceMappingURL=index.min.css.map */
