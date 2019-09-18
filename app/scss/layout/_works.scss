@@ -1,0 +1,43 @@
+.works {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -103px;
+    right: 0;
+    display: block;
+    width: 197px;
+    height: 264px;
+    background: url(img/blackberry-bg.png) no-repeat center / cover;
+  }
+}
+
+.works__content {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: -100px;
+    display: block;
+    width: 90px;
+    height: 77px;
+    background: url(img/leaf-6-bg.png) no-repeat center / cover;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -35px;
+    left: -125px;
+    display: block;
+    width: 72px;
+    height: 135px;
+    background: url(img/leaf-5-bg.png) no-repeat center / cover;
+  }
+}

@@ -1,0 +1,64 @@
+.video {
+  position: relative;
+  width: 660px;
+  height: 405px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 82px;
+  cursor: pointer;
+}
+
+.video__control,
+.video__duration,
+.video__sound {
+  display: flex;
+  align-items: center;
+}
+
+.video__control {
+  justify-content: space-between;
+  padding: 6px 20px;
+  height: 35px;
+  background-color: #3e3e3e;
+  margin-top: -4px;
+}
+
+.video__duration {
+  width: 73%;
+}
+
+.video__sound {
+  width: 23%;
+}
+
+.video__icon {
+  cursor: pointer;
+  width: 16px;
+  margin-right: 19px;
+}
+
+.video__length {
+  width: 100%;
+  flex-grow: 1;
+  appearance: none;
+  outline: none;
+  height: 4px;
+  border-radius: 1px;
+  background: #626262;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    background: #626262;
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+  }
+}
