@@ -1,0 +1,28 @@
+.delivery {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(img/delivery-bg.jpg) no-repeat center / cover;
+  z-index: -1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 83px;
+    left: 20px;
+    width: 47px;
+    height: 48px;
+    background: url(img/berry-bg.png) no-repeat center / cover;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 81px;
+    right: 3px;
+    width: 135px;
+    height: 188px;
+    background: url(img//leaf-7-bg.png) no-repeat center / cover;
+  }
+}

@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="icon" type="image/svg+xml" href="files/img/favicon/favicon.svg">
-	<link rel="stylesheet" href="files/index.min.css">
+	<link rel="stylesheet" href="files/main.min.css">
 	<title>Chocco</title>
 </head>
 
@@ -469,9 +469,97 @@
 			    </div><!-- .video -->
 			  </div><!-- .works__content -->
 			</section>
+
+			<section class="section delivery">
+			  <div class="delivery__content container">
+			    <h2 class="section-title section-title--green">Закажите доставку</h2>
+			
+			    <form class="delivery-form">
+			      <div class="delivery-form__column">
+			        <div class="delivery-form__row">
+			          <label class="delivery-form__item">
+			            <span class="delivery-form__title">Имя</span>
+			            <input type="text" name="name" class="delivery-form__input" required>
+			          </label>
+			
+			          <label class="delivery-form__item">
+			            <span class="delivery-form__title">Телефон</span>
+			            <input type="tel" id="phone" name="phone" class="delivery-form__input" placeholder="89022348912" pattern="8[0-9]{10}"
+			              required>
+			          </label>
+			        </div><!-- .delivery-form__row -->
+			
+			        <div class="delivery-form__row">
+			          <label class="delivery-form__item">
+			            <span class="delivery-form__title">Улица</span>
+			            <input type="text" name="street" class="delivery-form__input">
+			          </label>
+			        </div><!-- .delivery-form__row -->
+			
+			        <div class="delivery-form__row">
+			          <label class="delivery-form__item">
+			            <span class="delivery-form__title">Дом</span>
+			            <input type="text" name="house" class="delivery-form__input">
+			          </label>
+			
+			          <label class="delivery-form__item">
+			            <span class="delivery-form__title">Корпус</span>
+			            <input type="text" name="housing" class="delivery-form__input">
+			          </label>
+			
+			          <label class="delivery-form__item">
+			            <span class="delivery-form__title">Квартира</span>
+			            <input type="text" name="apartment" class="delivery-form__input">
+			          </label>
+			
+			          <label class="delivery-form__item delivery-form__item--hidden-on-mobile">
+			            <span class="delivery-form__title">Этаж</span>
+			            <input type="text" name="floor" class="delivery-form__input">
+			          </label>
+			        </div><!-- .delivery-form__row -->
+			      </div><!-- .delivery-form__column -->
+			
+			      <div class="delivery-form__column">
+			        <div class="delivery-form__row delivery-form__row--textarea">
+			          <label class="delivery-form__item">
+			            <span class="delivery-form__title">Комментарий</span>
+			            <textarea name="comment" class="delivery-form__input delivery-form__input--textarea" required></textarea>
+			          </label>
+			        </div><!-- .delivery-form__row -->
+			
+			        <div class="delivery-form__row">
+			          <label class="delivery-form__item delivery-form__item--flex">
+			            <input type="radio" name="pay" value="cash" class="delivery-form__input-hidden">
+			            <span class="delivery-form__radio"></span>
+			            Потребуется сдача
+			          </label>
+			
+			          <label class="delivery-form__item delivery-form__item--flex">
+			            <input type="radio" name="pay" value="card" class="delivery-form__input-hidden" checked>
+			            <span class="delivery-form__radio"></span>
+			            Оплата по карте
+			          </label>
+			        </div><!-- .delivery-form__row -->
+			
+			        <div class="delivery-form__row">
+			          <label class="delivery-form__item delivery-form__item--flex">
+			            <input type="checkbox" name="nocallback" class="delivery-form__input-hidden" checked>
+			            <span class="delivery-form__check"></span>
+			            Не перезванивать
+			          </label>
+			        </div><!-- .delivery-form__row -->
+			
+			        <div class="delivery-form__row">
+			          <button type="submit" class="button">Заказать</button>
+			          <button type="reset" class="button button--empty">Очистить</button>
+			        </div><!-- .delivery-form__row -->
+			      </div><!-- .delivery-form__column -->
+			    </form>
+			  </div><!-- .delivery__content -->
+			</section>
 		</div><!-- .main-content -->
 	</div><!-- .wrapper -->
-	<script src="files/index.min.js"></script>
+	<script src="files/main.min.js"></script>
 </body>
 
 </html>

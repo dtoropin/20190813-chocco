@@ -1,22 +1,25 @@
 'use strict';
 // gulp 4
 
-var gulp = require('gulp'),
-	watch = require('gulp-watch'),
-	prefixer = require('gulp-autoprefixer'),
-	minify = require('gulp-minify'),
-	sass = require('gulp-sass'),
-	sourcemaps = require('gulp-sourcemaps'),
-	rigger = require('gulp-rigger'),
-	cssmin = require('gulp-csso'),
-	gcmq = require('gulp-group-css-media-queries'),
-	imagemin = require('gulp-imagemin'),
-	pngquant = require('imagemin-pngquant'),
-	rimraf = require('rimraf'),
-	rename = require('gulp-rename'),
-	notify = require('gulp-notify'),
-	browserSync = require('browser-sync'),
-	reload = browserSync.reload;
+const gulp = require('gulp');
+const watch = require('gulp-watch');
+const rigger = require('gulp-rigger');
+const imagemin = require('gulp-imagemin');
+// const image = require('gulp-image');
+const rm = require('gulp-rm');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const sassGlob = require('gulp-sass-glob');
+const autoprefixer = require('gulp-autoprefixer');
+const gcmq = require('gulp-group-css-media-queries');
+const cleanCSS = require('gulp-clean-css');
+const sourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
+
+sass.compiler = require('node-sass');
 
 var path = {
 	html: {
@@ -30,7 +33,10 @@ var path = {
 		watch: 'app/scss/**/*.scss'
 	},
 	js: {
-		src: 'app/js/*.js',
+		src: [
+			// 'node_modules/jquery/dist/jquery.js',
+			'app/js/*.js'
+		],
 		dest: 'dist/files/',
 		watch: 'app/js/**/*.js'
 	},
@@ -44,7 +50,7 @@ var path = {
 		dest: 'dist/files/img/',
 		watch: 'app/img/**/*.*'
 	},
-	clean: 'dist'
+	clean: 'dist/**/*'
 };
 
 var config = {
@@ -67,13 +73,14 @@ gulp.task('html', function () {
 // js
 gulp.task('js', function () {
 	return gulp.src(path.js.src)
+		.pipe(sourcemaps.init())
 		.pipe(rigger())
-		.pipe(minify({
-			noSource: true,
-			ext: {
-				min: '.min.js'
-			}
+		.pipe(concat('main.min.js', { newLine: ';' }))
+		.pipe(babel({
+			presets: ['@babel/env']
 		}))
+		.pipe(uglify())
+		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(path.js.dest))
 		.pipe(reload({ stream: true }));
 });
@@ -82,11 +89,12 @@ gulp.task('js', function () {
 gulp.task('style', function () {
 	return gulp.src(path.style.src)
 		.pipe(sourcemaps.init())
-		.pipe(sass({ outputStyle: 'compact' }).on("error", notify.onError()))
-		.pipe(rename({ suffix: '.min', prefix: '' }))
-		.pipe(prefixer())
+		.pipe(concat('main.min.scss'))
+		.pipe(sassGlob())
+		.pipe(sass().on('error', sass.logError))
+		.pipe(autoprefixer({ cascade: false }))
 		// .pipe(gcmq())
-		// .pipe(cssmin())
+		.pipe(cleanCSS())
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(path.style.dest))
 		.pipe(reload({ stream: true }));
@@ -96,10 +104,10 @@ gulp.task('style', function () {
 gulp.task('image', function () {
 	return gulp.src(path.img.src)
 		.pipe(imagemin({
+			interlaced: true,
 			progressive: true,
-			svgoPlugins: [{ removeViewBox: false }],
-			use: [pngquant()],
-			interlaced: true
+			optimizationLevel: 5,
+			svgoPlugins: [{ removeViewBox: true }]
 		}))
 		.pipe(gulp.dest(path.img.dest))
 		.pipe(reload({ stream: true }));
@@ -129,8 +137,9 @@ gulp.task('webserver', function () {
 });
 
 // clean
-gulp.task('clean', function (cb) {
-	rimraf(path.clean, cb);
+gulp.task('clean', function () {
+	return gulp.src(path.clean, { read: false })
+		.pipe(rm())
 });
 
 // default task

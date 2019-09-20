@@ -1,7 +1,7 @@
 (function () {
 
 	var init = function () {
-		console.log('It is myModule other!');
+		console.log('It\' my module!');
 		_setUpListners();
 	};
 
