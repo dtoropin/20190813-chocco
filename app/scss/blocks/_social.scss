@@ -1,0 +1,33 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social__item {
+  opacity: 0.3;
+  transition: .3s opacity ease;
+
+  & ~ .social__item {
+    margin-left: 20px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.social__link {
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  &--vk {
+    width: 25px;
+  }
+}
+
+@each $icon in (vk, f, in, tv) {
+  .social__link--#{$icon} {
+    background: url(img/sprite.svg##{$icon}) no-repeat center / cover;
+  }
+}

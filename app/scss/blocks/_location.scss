@@ -1,0 +1,30 @@
+.location {
+  font-style: normal;
+  font-size: em(21px);
+}
+
+.location__addr {
+  display: block;
+  margin-bottom: 12px;
+  color: #010101;
+}
+
+.location__tel {
+  color: $accent_color;
+  display: inline-flex;
+  align-items: center;
+  transition: .3s opacity ease;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 11px;
+    margin-right: 8px;
+    background: url(img/phone-green-bg.png) no-repeat center / cover;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

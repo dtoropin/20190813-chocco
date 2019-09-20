@@ -1,0 +1,21 @@
+.contacts {
+  position: relative;
+}
+
+.contacts__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts__map {
+  height: 100%;
+}
+
+.contacts__footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 26px 0 21px;
+}
