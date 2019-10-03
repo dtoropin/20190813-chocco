@@ -1,10 +1,13 @@
-@import 'core/_variables';
-@import 'core/_mixins';
-@import 'core/_fonts';
+@import 'core/variables';
+@import 'core/mixins';
+@import 'core/fonts';
+@import 'core/reset';
+@import 'core/base';
 
-@import '../../node_modules/normalize.css/normalize';
-@import 'core/_reset';
-@import 'core/_base';
+@import 'blocks/navpage';
+
+@import 'blocks/navmobile';
+@import 'blocks/hamburger';
 
 @import 'layout/first';
 @import 'blocks/header';

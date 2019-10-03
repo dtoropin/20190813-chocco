@@ -6,76 +6,126 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="icon" type="image/svg+xml" href="files/img/favicon/favicon.svg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+		integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
 	<link rel="stylesheet" href="files/main.min.css">
 	<title>Chocco</title>
 </head>
 
 <body>
 	<div class="wrapper">
+
+		<ul class="navpage">
+			<li class="navpage__item is-active">
+				<a href="#" class="navpage__point" data-scroll-to="0"></a>
+			</li>
+		</ul><!-- .navpage -->
+
+		<div class="nav-mobile">
+		  <a href="#" class="hamburger">
+		    <span class="hamburger__elem"></span>
+		    <span class="hamburger__elem"></span>
+		    <span class="hamburger__elem"></span>
+		  </a>
+		  <ul class="nav-mobile__list container-flex">
+		    <li class="nav-mobile__item">
+		      <a href="#" class="nav-mobile__link" data-scroll-to="1">О нас</a>
+		    </li>
+		    <li class="nav-mobile__item">
+		      <a href="#" class="nav-mobile__link" data-scroll-to="2">Батончики</a>
+		    </li>
+		    <li class="nav-mobile__item">
+		      <a href="#" class="nav-mobile__link" data-scroll-to="3">Команда</a>
+		    </li>
+		    <li class="nav-mobile__item">
+		      <a href="#" class="nav-mobile__link" data-scroll-to="4">Меню</a>
+		    </li>
+		    <li class="nav-mobile__item">
+		      <a href="#" class="nav-mobile__link" data-scroll-to="5">Отзывы</a>
+		    </li>
+		    <li class="nav-mobile__item">
+		      <a href="#" class="nav-mobile__link" data-scroll-to="6">Как мы работаем</a>
+		    </li>
+		    <li class="nav-mobile__item">
+		      <a href="#" class="nav-mobile__link" data-scroll-to="8">Контакты</a>
+		    </li>
+		  </ul>
+		</div><!-- .nav-mobile -->
+
 		<div class="main-content">
 			<section class="section first">
-			  <div class="first__container container">
-			    <header class="header">
+			  <header class="header">
+			    <div class="header__container container">
 			      <a href="index.html" class="logo">chocco</a>
-			    
+			  
 			      <nav class="nav">
 			        <ul class="nav__list">
 			          <li class="nav__item">
-			            <a href="#" class="nav__link">О нас</a>
+			            <a href="#" class="nav__link" data-scroll-to="1">О нас</a>
 			          </li>
 			          <li class="nav__item">
-			            <a href="#" class="nav__link">Батончики</a>
+			            <a href="#" class="nav__link" data-scroll-to="2">Батончики</a>
 			          </li>
 			          <li class="nav__item">
-			            <a href="#" class="nav__link">Команда</a>
+			            <a href="#" class="nav__link" data-scroll-to="3">Команда</a>
 			          </li>
 			          <li class="nav__item">
-			            <a href="#" class="nav__link">Меню</a>
+			            <a href="#" class="nav__link" data-scroll-to="4">Меню</a>
 			          </li>
 			          <li class="nav__item">
-			            <a href="#" class="nav__link">Отзывы</a>
+			            <a href="#" class="nav__link" data-scroll-to="5">Отзывы</a>
 			          </li>
 			          <li class="nav__item">
-			            <a href="#" class="nav__link">Как мы работаем</a>
+			            <a href="#" class="nav__link" data-scroll-to="6">Как мы работаем</a>
 			          </li>
 			          <li class="nav__item">
-			            <a href="#" class="nav__link">Контакты</a>
+			            <a href="#" class="nav__link" data-scroll-to="8">Контакты</a>
 			          </li>
 			        </ul>
 			      </nav>
-			    
+			  
 			      <a href="tel:+78009039090" class="phone">8 800 903 90 90</a>
-			    </header>
+			    </div><!-- .container -->
+			  </header>
 			
+			  <div class="first__container container">
 			    <div class="first__content">
-			      <h1 class="first__head">натуральные шоколадные батончики</h1>
+			      <div class="first__subscribe">
+			        <div class="first__head">
+			          <h1 class="first__title">натуральные шоколадные батончики</h1>
 			
-			      <div class="first__subs">
-			        <p>
-			          Наши батончики идеально подходят для
-			          тех, кто следит за своим здоровьем
-			        </p>
-			      </div>
+			          <div class="first__subs">
+			            <p>
+			              Наши батончики идеально подходят для
+			              тех, кто следит за своим здоровьем
+			            </p>
+			          </div>
 			
-			      <a href="#" class="button button--white">Заказать</a>
+			          <a href="#" class="button button--white">Заказать</a>
+			        </div><!-- .first__head -->
+			        
+			        <ul class="feature">
+			          <li class="feature__item">
+			            <div class="feature__img feature__img--leaves"></div>
+			            <div class="feature__text">100% натуральный продукт</div>
+			          </li>
+			
+			          <li class="feature__item">
+			            <div class="feature__img feature__img--car"></div>
+			            <div class="feature__text">3-5 дней доставка по РФ</div>
+			          </li>
+			
+			          <li class="feature__item">
+			            <div class="feature__img feature__img--ruler"></div>
+			            <div class="feature__text">Не портит фигуру</div>
+			          </li>
+			        </ul>
+			      </div><!-- .first__subscribe -->
+			
+			      <div class="first__bars">
+			        <img src="files/img/bars.png" alt="bars">
+			      </div><!-- .first__bars -->
 			    </div><!-- .first__content -->
-			
-			    <ul class="feature">
-			      <li class="feature__item">
-			        <div class="feature__img feature__img--leaves"></div>
-			        <div class="feature__text">100% натуральный продукт</div>
-			      </li>
-			
-			      <li class="feature__item">
-			        <div class="feature__img feature__img--car"></div>
-			        <div class="feature__text">3-5 дней доставка по РФ</div>
-			      </li>
-			
-			      <li class="feature__item">
-			        <div class="feature__img feature__img--ruler"></div>
-			        <div class="feature__text">Не портит фигуру</div>
-			      </li>
-			    </ul>
 			  </div><!-- .container -->
 			</section>
 
@@ -220,6 +270,83 @@
 			              <div class="slider__weight">
 			                <span class="slider__weight-text">Вес</span>
 			                <span class="slider__weight-number">98</span>
+			              </div>
+			            </div><!-- .slider__params -->
+			
+			            <div class="slider__footer">
+			              <span class="slider__price">140</span>
+			              <a href="#" class="button">Заказать</a>
+			            </div>
+			          </div><!-- .slider__content -->
+			        </li>
+			
+			        <li class="slider__item">
+			          <div class="slider__pictures">
+			            <div class="slider__img">
+			              <img src="files/img/slider/product2.png" alt="product1">
+			            </div>
+			          </div>
+			
+			          <div class="slider__content">
+			            <div class="composition">
+			              <span class="composition__text">Состав</span>
+			              <ul class="composition__list">
+			                <li class="composition__item">
+			                  <span class="composition__img composition__img--grape"></span>
+			                  <span class="composition__title">Виноград</span>
+			                  <span class="composition__weight">25</span>
+			                </li>
+			
+			                <li class="composition__item">
+			                  <span class="composition__img composition__img--nut"></span>
+			                  <span class="composition__title">Грецкий орех</span>
+			                  <span class="composition__weight">32</span>
+			                </li>
+			
+			                <li class="composition__item">
+			                  <span class="composition__img composition__img--almond"></span>
+			                  <span class="composition__title">Кунжутное семя</span>
+			                  <span class="composition__weight">20</span>
+			                </li>
+			
+			                <li class="composition__item">
+			                  <span class="composition__img composition__img--washing-powder"></span>
+			                  <span class="composition__title">Сухое молоко</span>
+			                  <span class="composition__weight">10</span>
+			                </li>
+			
+			                <li class="composition__item">
+			                  <span class="composition__img composition__img--apitherapy"></span>
+			                  <span class="composition__title">Зам. сахара</span>
+			                  <span class="composition__weight">4</span>
+			                </li>
+			
+			                <li class="composition__item">
+			                  <span class="composition__img composition__img--beans"></span>
+			                  <span class="composition__title">Какао бобы</span>
+			                  <span class="composition__weight">4</span>
+			                </li>
+			              </ul>
+			            </div><!-- .composition -->
+			
+			            <h2 class="slider__title">Батончик “Гранола виноград”</h2>
+			
+			            <div class="slider__subscribe">
+			              <p>
+			                Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко,
+			                заменитель сахара и какао бобы.
+			              </p>
+			            </div>
+			
+			            <div class="slider__params">
+			              <div class="slider__kkal">
+			                <span class="slider__kkal-text">Калорийность</span>
+			                <span class="slider__kkal-number">110</span>
+			              </div>
+			
+			              <div class="slider__weight">
+			                <span class="slider__weight-text">Вес</span>
+			                <span class="slider__weight-number">95</span>
 			              </div>
 			            </div><!-- .slider__params -->
 			
@@ -445,7 +572,7 @@
 			</section>
 
 			<section class="section works">
-			  <div class="works__content container">
+			  <div class="works__container container">
 			    <h2 class="section-title">Как мы работаем</h2>
 			
 			    <div class="video">
@@ -471,7 +598,7 @@
 			</section>
 
 			<section class="section delivery">
-			  <div class="delivery__content container">
+			  <div class="delivery__container container">
 			    <h2 class="section-title section-title--green">Закажите доставку</h2>
 			
 			    <form class="delivery-form">
@@ -587,6 +714,8 @@
 			</div>
 		</div><!-- .main-content -->
 	</div><!-- .wrapper -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"
+		integrity="sha256-vrn14y7WH7zgEElyQqm2uCGSQrX/xjYDjniRUQx3NyU=" crossorigin="anonymous"></script>
 	<script src="files/main.min.js"></script>
 </body>
 

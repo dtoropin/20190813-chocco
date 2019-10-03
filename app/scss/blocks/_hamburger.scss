@@ -1,0 +1,53 @@
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 31px;
+  right: 25px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 55;
+
+  @include notebook {
+    display: block;
+  }
+
+  &.active ~ .nav-mobile__list {
+    left: 0;
+  }
+}
+
+.hamburger__elem {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  transition: 0.3s all ease;
+  box-shadow: inset 0 0 1.5px #000;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.hamburger:hover > .hamburger__elem {
+  opacity: 0.8;
+}
+
+.hamburger.active > .hamburger__elem {
+  &:nth-child(1) {
+    top: 9px;
+    transform: rotate(45deg);
+  }
+
+  &:nth-child(2) {
+    display: none;
+  }
+
+  &:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}

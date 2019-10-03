@@ -1,0 +1,36 @@
+.nav-mobile {
+  display: none;
+  font-size: em(32px);
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 14px;
+  color: #fff;
+
+  @include notebook {
+    display: block;
+  }
+}
+
+.nav-mobile__list {
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  left: 100%;
+  background: rgba(#2e3336, 0.92);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s left ease;
+  z-index: 50;
+
+  @include notebook {
+    display: flex;
+  }
+}
+
+.nav-mobile__item ~ .nav-mobile__item {
+  margin-top: cp(45px);
+}

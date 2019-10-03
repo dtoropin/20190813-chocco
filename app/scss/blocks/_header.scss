@@ -1,4 +1,4 @@
-.header {
+.header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,6 +6,10 @@
 
 .phone {
   font-size: em(24px);
+
+  @include notebook {
+    display: none;
+  }
 
   &:hover {
     opacity: 0.8;

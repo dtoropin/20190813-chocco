@@ -1,7 +1,7 @@
 (function () {
 
 	var init = function () {
-		console.log('It\' my module!');
+		console.log($('.logo'));
 		_setUpListners();
 	};
 

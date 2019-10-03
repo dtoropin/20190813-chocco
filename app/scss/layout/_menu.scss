@@ -12,6 +12,10 @@
   position: absolute;
   top: 99px;
   left: 79px;
+
+  @include phone {
+    left: 20px;
+  }
 }
 
 .menu__content {
@@ -20,4 +24,8 @@
   bottom: 0;
   right: 0;
   left: 25%;
+
+  @include tablet {
+    left: 0;
+  }
 }

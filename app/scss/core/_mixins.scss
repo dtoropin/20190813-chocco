@@ -8,7 +8,7 @@
 }
 
 @function em($target, $context: $font_base_size) {
-	@return $target / $context + 0em;
+	@return $target / $context * 1em;
 }
 	
 @function cp($target, $context: $content_width) {

@@ -1,6 +1,8 @@
 .first {
-  background: url(img/first-bg.jpg) no-repeat center / cover;
+  background: url(img/pattern.png) no-repeat right top, #61c4d9;
   color: #fff;
+  padding-top: cp(24px);
+  padding-bottom: cp(47px);
 }
 
 .first__container {
@@ -8,46 +10,98 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-top: 24px;
-  padding-bottom: 47px;
+  justify-content: center;
+}
+
+.first__content {
+  display: flex;
+
+  @include tablet {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     width: 59px;
     height: 112px;
     background: url(img/leaf-bg.png) no-repeat center / cover;
     position: absolute;
     bottom: -55px;
-    left: -45px;
+    left: 0;
   }
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     width: 460px;
     height: 341px;
     background: url(img/berries-bg.png) no-repeat center / cover;
     position: absolute;
     bottom: -45px;
-    right: -60px;
+    right: 0;
+
+    @include tablet {
+      content: none;
+    }
   }
 }
 
-.first__content {
-  max-width: 405px;
-  margin: 20px 0;
+.first__subscribe {
+  width: 50%;
+  z-index: 5;
+
+  @include tablet {
+    width: 90%;
+    text-align: center;
+  }
 }
 
 .first__head {
+  margin-bottom: 65px;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+}
+
+.first__title {
   font-size: em(60px);
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 22px;
+
+  @include tablet {
+    margin-bottom: 10px;
+  }
+
+  @include phone {
+    font-size: em(42px);
+  }
 }
 
 .first__subs {
   font-size: em(21px);
   margin-bottom: 32px;
+}
+
+.first__bars {
+  position: relative;
+  width: 50%;
+
+  &::after {
+    content: none;
+    display: block;
+    width: 401px;
+    height: 280px;
+    background: url(img/berries-mobile-bg.png) no-repeat center / cover;
+    position: absolute;
+    bottom: -45px;
+    right: -60px;
+
+    @include tablet {
+      content: "";
+    }
+  }
 }

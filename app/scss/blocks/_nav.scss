@@ -2,6 +2,10 @@
   flex-grow: 1;
   margin-left: 42px;
   margin-right: 42px;
+
+  @include notebook {
+    display: none;
+  }
 }
 
 .nav__list {

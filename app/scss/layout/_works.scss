@@ -16,8 +16,11 @@
   }
 }
 
-.works__content {
+.works__container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   &::before {
     content: "";
@@ -28,6 +31,14 @@
     width: 90px;
     height: 77px;
     background: url(img/leaf-6-bg.png) no-repeat center / cover;
+
+    @include notebook {
+      right: -43px;
+    }
+
+    @include tablet {
+      right: 0;
+    }
   }
 
   &::after {
@@ -39,5 +50,13 @@
     width: 72px;
     height: 135px;
     background: url(img/leaf-5-bg.png) no-repeat center / cover;
+
+    @include notebook {
+      left: -47px;
+    }
+
+    @include tablet {
+      left: 0;
+    }
   }
 }

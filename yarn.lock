@@ -3537,6 +3537,13 @@ gulp-svg-sprite@^1.5.0:
     svg-sprite "^1.5.0"
     through2 "^2.0.3"
 
+gulp-svgo@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/gulp-svgo/-/gulp-svgo-2.1.1.tgz#93ee24fd36ecc241761808748f9c63261bf5e7a5"
+  integrity sha512-QSJq3rh8ic8v/U1rH0zAFiipU0dpGvnr0ZDgyZyqgxTXbxCY3M2EoHMVeL2GTOH8JR72X/vgBD2eaztD2oldHw==
+  dependencies:
+    svgo "^1.0.0"
+
 gulp-uglify@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/gulp-uglify/-/gulp-uglify-3.0.2.tgz#5f5b2e8337f879ca9dec971feb1b82a5a87850b0"
@@ -4317,11 +4324,6 @@ jpegtran-bin@^4.0.0:
     bin-build "^3.0.0"
     bin-wrapper "^4.0.0"
     logalot "^2.0.0"
-
-jquery@^3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
-  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
 
 js-base64@^2.1.8:
   version "2.5.1"
@@ -5222,11 +5224,6 @@ normalize-url@2.0.1:
     prepend-http "^2.0.0"
     query-string "^5.0.1"
     sort-keys "^2.0.0"
-
-normalize.css@^8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
-  integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
 
 now-and-later@^2.0.0:
   version "2.0.1"
@@ -6991,7 +6988,7 @@ svg-sprite@^1.5.0:
     xpath "^0.0.27"
     yargs "^12.0.2"
 
-svgo@^1.0.5, svgo@^1.1.1, svgo@^1.2.2:
+svgo@^1.0.0, svgo@^1.0.5, svgo@^1.1.1, svgo@^1.2.2:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-1.3.0.tgz#bae51ba95ded9a33a36b7c46ce9c359ae9154313"
   integrity sha512-MLfUA6O+qauLDbym+mMZgtXCGRfIxyQoeH6IKVcFslyODEe/ElJNwr0FohQ3xG4C6HK6bk3KYPPXwHVJk3V5NQ==

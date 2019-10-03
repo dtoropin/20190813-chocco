@@ -33,10 +33,7 @@ var path = {
 		watch: 'app/scss/**/*.scss'
 	},
 	js: {
-		src: [
-			// 'node_modules/jquery/dist/jquery.js',
-			'app/js/*.js'
-		],
+		src: 'app/js/*.js',
 		dest: 'dist/files/',
 		watch: 'app/js/**/*.js'
 	},
@@ -146,13 +143,14 @@ gulp.task('clean', function () {
 gulp.task('default', gulp.series('clean', 'build', gulp.parallel('webserver', 'watch')));
 
 //svg sprite
-var svgSprite = require('gulp-svg-sprite');
+const svgSprite = require('gulp-svg-sprite');
+const svgo = require('gulp-svgo');
 gulp.task('svgSprite', function () {
-	return gulp.src('source/icons/*.svg') //svg files for sprite
+	return gulp.src('source/icons/*.svg')
 		.pipe(svgSprite({
 			mode: {
 				stack: {
-					sprite: "../sprite.svg"  //sprite file name
+					sprite: "../sprite.svg"
 				}
 			},
 		}

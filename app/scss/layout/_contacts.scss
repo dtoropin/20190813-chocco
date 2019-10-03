@@ -2,13 +2,8 @@
   position: relative;
 }
 
-.contacts__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .contacts__map {
+  width: 100%;
   height: 100%;
 }
 
@@ -18,4 +13,15 @@
   right: 0;
   left: 0;
   padding: 26px 0 21px;
+}
+
+.contacts__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include phone {
+    flex-direction: column;
+    text-align: center;
+  }
 }

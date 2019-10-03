@@ -1,4 +1,5 @@
 .composition {
+  display: inline-block;
   position: relative;
   width: 90px;
   height: 90px;
@@ -7,13 +8,29 @@
   text-align: center;
   transition: .3s background-color ease;
   margin-bottom: 25px;
+  z-index: $z-composition;
 
   &:hover {
     background-color: #00accf;
     & > .composition__list {
+      left: 100%;
       opacity: 1;
-      z-index: $z-composition;
     }
+
+    @include tablet {
+      & > .composition__list {
+        left: initial;
+        right: 100%;
+        opacity: 1;
+      }
+    }
+  }
+
+  @include tablet {
+    margin-bottom: 0;
+    position: absolute;
+    top: 24px;
+    right: 50px;
   }
 }
 
@@ -33,10 +50,9 @@
 
 .composition__list {
   opacity: 0;
-  z-index: -1;
   position: absolute;
   top: 0;
-  left: 100%;
+  left: 9999px;
   width: 270px;
   padding: 26px 30px;
   border-radius: 5px;
@@ -45,7 +61,17 @@
   background: #fff;
   font-weight: 500;
   color: #2f3234;
-  transition: .3s ease;
+  transition: .3s opacity ease;
+
+  @include notebook {
+    width: 215px;
+    padding: 15px;
+  }
+
+  @include tablet {
+    left: initial;
+    right: 9999px;
+  }
 }
 
 .composition__item {
@@ -59,9 +85,13 @@
   width: 35px;
   height: 35px;
   margin-right: 25px;
+
+  @include notebook {
+    margin-right: 15px;
+  }
 }
 
-@each $icon in (oat, seaweed, almond, washing-powder, seeds, apitherapy, beans) {
+@each $icon in (oat, seaweed, almond, washing-powder, seeds, apitherapy, beans, grape, nut) {
   .composition__img--#{$icon} {
     background: url(img/sprite.svg##{$icon}) no-repeat center / cover;
   }

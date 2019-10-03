@@ -26,3 +26,9 @@
     background: url(img//leaf-7-bg.png) no-repeat center / cover;
   }
 }
+
+.delivery__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

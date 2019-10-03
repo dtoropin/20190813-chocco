@@ -1,0 +1,46 @@
+.navpage {
+  position: fixed;
+  top: 90px;
+  right: 50px;
+
+  @include notebook {
+    display: none;
+  }
+}
+
+.navpage__item {
+  & ~ .navpage__item {
+    margin-top: 16px;
+  }
+
+  &.is-active > .navpage__point {
+    pointer-events: none;
+  }
+}
+
+.navpage__point {
+  position: relative;
+  display: block;
+  padding: 7px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transition: .3s all ease;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+}
+
+.navpage__point:hover,
+.navpage__item.is-active > .navpage__point {
+  border: 1px solid #fff;
+}

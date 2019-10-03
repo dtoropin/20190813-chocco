@@ -1,10 +1,26 @@
 .delivery-form {
   display: flex;
   justify-content: space-between;
+  z-index: 5;
+
+  @include tablet {
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  @include phone {
+    width: 100%;
+  }
 }
 
 .delivery-form__column {
   width: 49%;
+
+  @include tablet {
+    width: 100%;
+  }
 }
 
 .delivery-form__row {
@@ -13,6 +29,11 @@
 
   & .button ~ .button {
     margin-left: 5px;
+  }
+
+  @include tablet {
+    justify-content: center;
+    margin-bottom: 15px;
   }
 }
 

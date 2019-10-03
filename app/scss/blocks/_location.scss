@@ -1,6 +1,10 @@
 .location {
   font-style: normal;
   font-size: em(21px);
+
+  @include phone {
+    margin-bottom: 15px;
+  }
 }
 
 .location__addr {

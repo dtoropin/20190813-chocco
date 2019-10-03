@@ -10,15 +10,33 @@
   position: relative;
   display: flex;
   overflow: hidden;
+  z-index: 10;
 
   &.active {
     flex-shrink: 1;
     & > .accordion__text {
       width: 100%;
+
+      & > p {
+        opacity: 1;
+        transition: 0.3s opacity ease;
+        transition-delay: 0.5s;
+      }
     }
 
     & > .accordion__link--substrate {
       display: block;
+
+      @include phone {
+        right: 90px;
+      }
+    }
+
+    @include phone {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 15;
     }
   }
 }
@@ -33,7 +51,12 @@
   font-weight: 500;
   color: #fff;
   box-sizing: border-box;
-  transition: .3s color ease;
+  transition: 0.3s color ease;
+
+  @include phone {
+    width: 80px;
+    padding: 46px 18px 0 18px;
+  }
 
   &--substrate {
     display: none;
@@ -44,17 +67,17 @@
   }
 
   &:hover {
-    color: rgba(#fff, .7);
+    color: rgba(#fff, 0.7);
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,.7);
+    background: rgba(0, 0, 0, 0.7);
     z-index: -1;
   }
 }
@@ -67,12 +90,17 @@
 
 .accordion__text {
   width: 0;
-  background-color: rgba(47, 50, 52,.93);
+  background-color: rgba(47, 50, 52, 0.93);
   color: #ffffff;
   line-height: 1.5;
   z-index: 5;
 
   & > p {
+    opacity: 0;
     padding: cp(50px) cp(127px) cp(50px) cp(27px);
+  }
+
+  @include phone {
+    padding-top: 50px;
   }
 }
