@@ -2,4 +2,4 @@
 
 Студент: Торопин Денис
 
-url: https://dtoropin.github.io/20190813-chocco/dist
+url: https://dtoropin.github.io/20190813-chocco/dist/
